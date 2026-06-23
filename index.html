@@ -314,11 +314,18 @@
       text-align: center;
     }
 
-    .footer-logo {
+    .footer-logo-img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand {
       font-size: 1.05rem;
       font-weight: 800;
       color: var(--black);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .footer-sub {
@@ -334,7 +341,7 @@
       }
 
       .step-arrow {
-        transform: rotate(90deg);
+        transform: rotate(-90deg);
         padding: 4px 0;
         font-size: 1.4rem;
       }
@@ -464,7 +471,8 @@
   <!-- ═══ FOOTER ═══ -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-logo">פשוט להשקיע</div>
+      <img src="logo.png" alt="פשוט להשקיע" class="footer-logo-img">
+      <div class="footer-brand">פשוט להשקיע</div>
       <div class="footer-sub">© תומר אליהו | כל הזכויות שמורות</div>
     </div>
   </footer>

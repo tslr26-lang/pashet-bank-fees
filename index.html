@@ -14,17 +14,15 @@
       --bg-alt:       #efe9e0;
       --card:         #ffffff;
       --white:        #ffffff;
-      --text:         #1a1612;
-      --text-sub:     #5c5248;
-      --text-dim:     #9a8f86;
-      --gold:         #b8902a;
-      --gold-light:   #d4ac50;
-      --gold-hover:   #9a7520;
-      --gold-border:  rgba(184, 144, 42, 0.25);
-      --gold-bg:      rgba(184, 144, 42, 0.07);
+      --black:        #000000;
+      --text:         #000000;
+      --orange:       #e07a3a;
+      --orange-hover: #c4662a;
+      --orange-border: rgba(224, 122, 58, 0.25);
+      --orange-bg:    rgba(224, 122, 58, 0.07);
       --green:        #1a6b30;
-      --shadow:       0 2px 16px rgba(80, 60, 30, 0.08);
-      --shadow-card:  0 4px 24px rgba(80, 60, 30, 0.1);
+      --shadow:       0 2px 16px rgba(60, 40, 20, 0.08);
+      --shadow-card:  0 4px 24px rgba(60, 40, 20, 0.1);
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -71,7 +69,7 @@
 
     .divider {
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold-border), transparent);
+      background: linear-gradient(90deg, transparent, var(--orange-border), transparent);
     }
 
     /* ── HERO ── */
@@ -87,7 +85,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 600px 320px at 50% 0%, rgba(184,144,42,0.1) 0%, transparent 70%);
+      background: radial-gradient(ellipse 600px 320px at 50% 0%, rgba(224,122,58,0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -130,9 +128,9 @@
 
     .step-card {
       background: var(--white);
-      border: 1px solid rgba(184,144,42,0.15);
+      border: 1px solid var(--orange-border);
       border-radius: 14px;
-      padding: 32px 20px 28px;
+      padding: 40px 24px 36px;
       text-align: center;
       box-shadow: var(--shadow);
       position: relative;
@@ -144,28 +142,28 @@
       position: absolute;
       top: 0; right: 0; left: 0;
       height: 3px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      background: linear-gradient(90deg, transparent, var(--orange), transparent);
     }
 
     .step-num {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 700;
-      color: var(--gold);
+      color: var(--orange);
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .step-title {
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       font-weight: 800;
-      color: var(--text);
-      margin-bottom: 8px;
+      color: var(--black);
+      margin-bottom: 10px;
     }
 
     .step-desc {
-      font-size: 0.95rem;
-      color: var(--text-sub);
+      font-size: 1rem;
+      color: var(--black);
       line-height: 1.7;
     }
 
@@ -179,25 +177,25 @@
     .message-block:last-child { margin-bottom: 0; }
 
     .message-eyebrow {
-      font-size: 0.72rem;
+      font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--orange);
       margin-bottom: 10px;
     }
 
     .message-title {
       font-size: clamp(1.25rem, 2.8vw, 1.65rem);
       font-weight: 800;
-      color: var(--text);
+      color: var(--black);
       line-height: 1.25;
       margin-bottom: 8px;
     }
 
     .message-subtitle {
       font-size: clamp(0.95rem, 1.8vw, 1.05rem);
-      color: var(--text-sub);
+      color: var(--black);
       line-height: 1.75;
       margin-bottom: 20px;
     }
@@ -205,7 +203,7 @@
     /* Message card */
     .message-card {
       background: var(--white);
-      border: 1px solid var(--gold-border);
+      border: 1px solid var(--orange-border);
       border-radius: 16px;
       overflow: hidden;
       box-shadow: var(--shadow-card);
@@ -217,20 +215,20 @@
       position: absolute;
       top: 0; right: 0; left: 0;
       height: 3px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      background: linear-gradient(90deg, transparent, var(--orange), transparent);
     }
 
     .message-text {
       padding: 28px 28px 20px;
       font-size: clamp(0.95rem, 1.8vw, 1.05rem);
-      color: var(--text-sub);
+      color: var(--black);
       line-height: 1.95;
       white-space: pre-line;
       user-select: text;
     }
 
     .message-placeholder {
-      color: var(--gold);
+      color: var(--orange);
       font-weight: 700;
     }
 
@@ -245,7 +243,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--gold);
+      background: var(--orange);
       color: #fff;
       font-family: 'Assistant', sans-serif;
       font-weight: 800;
@@ -260,9 +258,9 @@
     }
 
     .copy-btn:hover {
-      background: var(--gold-hover);
+      background: var(--orange-hover);
       transform: scale(1.03);
-      box-shadow: 0 6px 24px rgba(184,144,42,0.3);
+      box-shadow: 0 6px 24px rgba(224,122,58,0.3);
     }
 
     .copy-btn:active { transform: scale(0.97); }
@@ -276,8 +274,8 @@
     /* ── HINT BANNER ── */
     .hint-banner {
       margin: 44px 0;
-      background: var(--gold-bg);
-      border: 1px solid var(--gold-border);
+      background: var(--orange-bg);
+      border: 1px solid var(--orange-border);
       border-radius: 14px;
       padding: 22px 24px;
       display: flex;
@@ -289,31 +287,31 @@
 
     .hint-text {
       font-size: clamp(0.95rem, 1.8vw, 1.05rem);
-      color: var(--text);
+      color: var(--black);
       font-weight: 600;
       line-height: 1.7;
     }
 
-    .hint-text span { color: var(--gold); }
+    .hint-text span { color: var(--orange); }
 
     /* ── FOOTER ── */
     .footer {
       padding: 40px 0 32px;
       background: var(--bg-alt);
-      border-top: 1px solid var(--gold-border);
+      border-top: 1px solid var(--orange-border);
       text-align: center;
     }
 
     .footer-logo {
       font-size: 1.05rem;
       font-weight: 800;
-      color: var(--text);
+      color: var(--black);
       margin-bottom: 6px;
     }
 
     .footer-sub {
       font-size: 0.78rem;
-      color: var(--text-dim);
+      color: #555;
     }
 
     /* ── Mobile ── */
@@ -388,7 +386,7 @@
       <div class="message-block reveal">
         <div class="message-eyebrow">הודעה ראשונה</div>
         <h2 class="message-title">שלח את זה לבנק</h2>
-        <p class="message-subtitle">החלף את <strong style="color:var(--gold)">מספר החשבון</strong> שלך בסוגריים — ושלח. ברוב המקרים זה מספיק.</p>
+        <p class="message-subtitle">החלף את <strong style="color:var(--orange)">מספר החשבון</strong> שלך בסוגריים — ושלח. ברוב המקרים זה מספיק.</p>
         <div class="message-card">
           <div class="message-text" id="msg1">שלום רב, אני פונה אליכם בבקשה לבחון את תנאי ניהול החשבון שלי, ולהפסיק את גביית העמלות הקבועות (כגון עמלות ניהול עו״ש, עמלות ערוץ ישיר ותחזוקה חודשיות) בחשבון מספר <span class="message-placeholder">[מספר החשבון שלך]</span>.
 
